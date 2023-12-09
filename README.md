@@ -1,3 +1,60 @@
+# Testing First Time Angular 17
+
+### First Steps [Angular Dev](https://angular.dev) [oAuth2 Google](https://developers.google.com/identity/openid-connect/openid-connect)
+* validate version
+* update version
+* create project
+* run server
+* google auth
+```
+ng version
+npm install -g @angular/cli@latest
+ng new project-name
+ng serve
+npm i angular-oauth2-oidc
+```
+
+### Install Tailwind CSS & DaisyUI [Tailwind CSS](https://tailwindcss.com) [Daisy UI](https://daisyui.com)
+```
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+npm i -D daisyui@latest
+```
+
+1. in the tailwind.config.js file add...
+```
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
+  plugins: [
+    require("daisyui")
+  ],
+  ...
+}
+```
+
+2. in the styles.css file add directives
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Some Commands
+* Create Components
+* Create Interfaces
+* Create Services
+* Create Modules
+```
+ng g c components/comp_name
+ng g i interfaces/inte_name
+ng g s services/serv_name
+ng g m modules/modu_name
+```
+
+<hr/>
+
 # TestingAngular17
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
