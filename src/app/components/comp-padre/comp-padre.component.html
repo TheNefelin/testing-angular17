@@ -1,0 +1,34 @@
+<section class="flex justify-center gap-4 m-4">
+
+  <div class="card bg-base-200 p-4 shadow-md">
+    <section class="grid gap-4">
+      <p>Componente Hijo</p>
+      
+      <input 
+        #input_padre
+        (keyup)="handleKeyUp(input_padre.value)"
+        type="text" 
+        placeholder="Escribe Algo" 
+        class="input input-bordered input-sm w-full max-w-xs" 
+      />
+    
+      <button 
+        (click)="handleClick()"
+        class="btn btn-primary"
+      >Enviar Texto</button>
+    
+      <textarea 
+        [value]="txtArea"
+        placeholder="Mensajes" 
+        class="textarea textarea-bordered textarea-sm w-full max-w-xs" 
+      ></textarea>
+    </section>
+  </div>
+  
+  <div class="card bg-base-200 p-4 shadow-md">
+    <app-comp-hijo [txtEntrante]="txtSaliente" (newTxtSalienteEvent)="addTxtEntrante($event)"></app-comp-hijo>
+  </div>
+
+</section>
+
+
