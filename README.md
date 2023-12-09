@@ -1,6 +1,9 @@
 # Testing First Time Angular 17
 
-### First Steps [Angular Dev](https://angular.dev) [oAuth2 Google](https://developers.google.com/identity/openid-connect/openid-connect)
+### First Steps 
+[Angular Dev](https://angular.dev) 
+[Google oAuth2](https://developers.google.com/identity/openid-connect/openid-connect)
+[Google Console](https://console.cloud.google.com/apis)
 * validate version
 * update version
 * create project
@@ -11,7 +14,7 @@ ng version
 npm install -g @angular/cli@latest
 ng new project-name
 ng serve
-npm i angular-oauth2-oidc
+npm install angular-oauth2-oidc
 ```
 
 ### Install Tailwind CSS & DaisyUI [Tailwind CSS](https://tailwindcss.com) [Daisy UI](https://daisyui.com)

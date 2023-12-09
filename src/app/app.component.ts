@@ -5,6 +5,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { PhoneComponent } from './components/phone/phone.component';
 import { CompPadreComponent } from './components/comp-padre/comp-padre.component';
+import { ValidateRutComponent } from './components/validate-rut/validate-rut.component';
+import { ObservadorComponent } from './components/observador/observador.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +18,8 @@ import { CompPadreComponent } from './components/comp-padre/comp-padre.component
     LoginComponent,
     PhoneComponent,
     CompPadreComponent,
+    ValidateRutComponent,
+    ObservadorComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

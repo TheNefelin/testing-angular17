@@ -1,0 +1,7 @@
+<section class="flex justify-center gap-4 p-4">
+  <input #txt (keyup)="addTxt(txt.value)" type="number" placeholder="Type here"
+    class="input input-bordered input-sm" />
+  <button (click)="handleClick()" class="btn btn-sm">Obtener Rut</button>
+</section>
+
+<p class="text-center">{{msge}}</p>
