@@ -1,14 +1,11 @@
 # Testing First Time Angular 17
 
-### First Steps 
-[Angular Dev](https://angular.dev) 
-[Google oAuth2](https://developers.google.com/identity/openid-connect/openid-connect)
-[Google Console](https://console.cloud.google.com/apis)
+### First Steps [Angular Dev](https://angular.dev) 
 * validate version
 * update version
 * create project
 * run server
-* google auth
+* google auth [Google Console](https://console.cloud.google.com/apis) & [Google oAuth2](https://developers.google.com/identity/openid-connect/openid-connect)
 ```
 ng version
 npm install -g @angular/cli@latest

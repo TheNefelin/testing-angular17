@@ -6,16 +6,19 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  loggedIn = new BehaviorSubject<boolean>(false);
+  private loggedIn = new BehaviorSubject<boolean>(false);
+  loggedIn$ = this.loggedIn.asObservable()
 
   constructor(private router: Router) { }
 
   logIn() {
     this.loggedIn.next(true)
+    this.redirectToHome()
   }
 
   logOut() {
     this.loggedIn.next(false)
+    this.redirectToHome()
   }
 
   private redirectToHome() {
