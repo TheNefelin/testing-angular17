@@ -21,7 +21,6 @@ export class CompPadreComponent {
 
   handleClick() {
     this.txtSaliente = this.txtInput
-    console.log(this.txtSaliente)
   }
 
   addTxtEntrante(value: string) {
