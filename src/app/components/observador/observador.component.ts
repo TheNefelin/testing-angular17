@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
+import { ProductsService } from '../../services/products.service';
+import { Product } from '../../interfaces/product';
 
 @Component({
   selector: 'app-observador',
@@ -12,15 +14,21 @@ import { CommonModule } from '@angular/common';
   styleUrl: './observador.component.css'
 })
 export class ObservadorComponent {
-  isLogin$ = this.auth.loggedIn$
+  products$ = this.productsService.getProducts$()
+  items$ = this.productsService.items$
 
-  constructor(private auth: AuthService) {}
+  constructor(private productsService: ProductsService) {}
 
-  logIn(){
-    this.auth.logIn()
+  addItem(prod: Product) {
+    const newItem = {
+      id: prod.id,
+      nombre: prod.nombre,
+      img_cover: prod.img_cover,
+      cantidad: 1,
+      precio: 5000,
+    }
+
+    this.productsService.addItem(newItem)
+    console.log(newItem)
   }
-
-  logOut() {
-    this.auth.logOut()
-  }  
 }

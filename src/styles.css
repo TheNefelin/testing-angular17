@@ -21,3 +21,7 @@
   background-color: rgb(255, 255, 255);
   overflow: hidden;
 }
+
+.product {
+  object-fit: cover;
+}

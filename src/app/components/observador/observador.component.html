@@ -1,15 +1,92 @@
 <section class="card bg-base-200 shadow-lg p-4 m-4 flex">
-  Observable
+  
+  @for (item of items$ | async; track item.id) {
 
-  <div class="flex justify-center items-center gap-4">
-    @if (isLogin$ | async) {
-      <span>LOGEADO</span>
-      <button (click)="logOut()" class="btn btn-secondary">LogOut</button>
-    } @else {
-      <span>NO LOGEADO</span>
-      <button (click)="logIn()" class="btn btn-primary">LogIn</button>
+    <div class="overflow-x-auto">
+      <table class="table">
+        <!-- head -->
+        <thead>
+          <tr>
+            <th>
+              <label>
+                <input type="checkbox" class="checkbox" />
+              </label>
+            </th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Favorite Color</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- row 4 -->
+          <tr>
+            <th>
+              <label>
+                <input type="checkbox" class="checkbox" />
+              </label>
+            </th>
+            <td>
+              <div class="flex items-center gap-3">
+                <div class="avatar">
+                  <div class="mask mask-squircle w-12 h-12">
+                    <img src="/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component" />
+                  </div>
+                </div>
+                <div>
+                  <div class="font-bold">Yancy Tear</div>
+                  <div class="text-sm opacity-50">Brazil</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              Wyman-Ledner
+              <br/>
+              <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+            </td>
+            <td>Indigo</td>
+            <th>
+              <button class="btn btn-ghost btn-xs">details</button>
+            </th>
+          </tr>
+        </tbody>
+        <!-- foot -->
+        <tfoot>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Job</th>
+            <th>Favorite Color</th>
+            <th></th>
+          </tr>
+        </tfoot>
+        
+      </table>
+    </div>
+
+  }
+ 
+  <div class="flex flex-wrap justify-center gap-4">
+    @for (item of products$ | async; track item.id) {
+      <div class="card card-compact w-60 bg-base-100 shadow-xl">
+        <figure>
+          <img 
+            class="product w-60 h-60"
+            [src]="item.img_cover" 
+            alt="Shoes" 
+            height="500"
+            width="500"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">{{item.nombre}} - (5.000$)</h2>
+          <p>{{item.descripcion}}</p>
+          <div class="card-actions justify-end">
+            <button (click)="addItem(item)" class="btn btn-primary">Agregar</button>
+          </div>
+        </div>
+      </div>
     }
   </div>
 
 </section>
-
