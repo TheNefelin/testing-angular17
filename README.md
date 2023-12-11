@@ -46,12 +46,18 @@ module.exports = {
 * Create Interfaces
 * Create Services
 * Create Modules
+* environments
+* .env [doc](https://github.com/chihab/ngx-env)
 ```
 ng g c components/comp_name
 ng g i interfaces/inte_name
 ng g s services/serv_name
 ng g m modules/modu_name
+ng g environments
+ng add @ngx-env/builder
 ```
+> [!WARNING]
+> Use @ngx-env/builder for private environments var.
 
 <hr/>
 
