@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../interfaces/product';
