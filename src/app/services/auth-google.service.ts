@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AuthConfig, OAuthService } from 'angular-oauth2-oidc';
-import { BehaviorSubject, Subject, map } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { GoogleUserInfo } from '../interfaces/google-user-info';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 const authConfig: AuthConfig = {
   issuer: "https://accounts.google.com",
   strictDiscoveryDocumentValidation: false,
   redirectUri: window.location.origin,
-  clientId: "529904203616-rpd70g5dqapdh57aptbk01k6tkmgsppk.apps.googleusercontent.com",
+  clientId: environment.GOOGLE_ID,
   scope: "openid profile email",
 }
 
@@ -28,6 +29,7 @@ export class AuthGoogleService {
     private readonly oAuthService: OAuthService,
     private router: Router,
   ) {
+    console.log(environment.GOOGLE_ID)
     this.oAuthService.configure(authConfig)
 
     this.oAuthService.loadDiscoveryDocument().then(() => {
