@@ -1,7 +1,25 @@
-<section class="flex justify-center gap-4 p-4">
+<section class="flex justify-center items-center gap-4 p-4">
+
+  @if ((userInfo$ | async)?.info?.sub !== "") {
+
+  <button (click)="logOut()" class="btn btn-error">Log Out</button>
+
+  <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+    <div class="w-10 rounded-full">
+      <img alt="login" src="{{( userInfo$ | async)?.info?.picture }}" />
+    </div>
+  </div>
+
+  <span class="grid">
+    <p>id: {{( userInfo$ | async)?.info?.sub }}</p>
+    <p>email: {{( userInfo$ | async)?.info?.email }}</p>
+    <p>name: {{( userInfo$ | async)?.info?.name }}</p>
+  </span>
+
+  } @else {
 
   <button
-    (click)="login()"
+    (click)="logIn()"
     class="btn btn-outline">
     <svg class="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink" width="800px" height="800px"
@@ -21,8 +39,6 @@
     <span>LogIn</span>
   </button>
 
-  <button (click)="logout()" class="btn btn-error">Log Out</button>
+  }
 
 </section>
-
-

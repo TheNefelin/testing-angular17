@@ -6,8 +6,8 @@ import { ObservadorComponent } from './components/observador/observador.componen
 import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
-  { path: "", component: PhoneComponent },
-  { path: "login", component: LoginComponent },
+  { path: "", component: LoginComponent },
+  { path: "telefonos", component: PhoneComponent },
   { path: "rut", component: ValidateRutComponent },
   { path: "observable", component: ObservadorComponent },
   { path: "padre-hijo", component: CompPadreComponent },

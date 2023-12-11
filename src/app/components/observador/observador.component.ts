@@ -3,6 +3,7 @@ import { AuthService } from '../../services/auth.service';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../interfaces/product';
+import { Item } from '../../interfaces/item';
 
 @Component({
   selector: 'app-observador',
@@ -29,6 +30,9 @@ export class ObservadorComponent {
     }
 
     this.productsService.addItem(newItem)
-    console.log(newItem)
+  }
+
+  removeItem(prod: Item) {
+    this.productsService.removeITem(prod)
   }
 }

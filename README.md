@@ -4,14 +4,14 @@
 * validate version
 * update version
 * create project
-* run server
 * google auth [Google Console](https://console.cloud.google.com/apis) & [Google oAuth2](https://developers.google.com/identity/openid-connect/openid-connect)
+* run server
 ```
 ng version
 npm install -g @angular/cli@latest
 ng new project-name
-ng serve
 npm install angular-oauth2-oidc
+ng serve
 ```
 
 ### Install Tailwind CSS & DaisyUI [Tailwind CSS](https://tailwindcss.com) [Daisy UI](https://daisyui.com)
