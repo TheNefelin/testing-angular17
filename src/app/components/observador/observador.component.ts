@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { ProductsService } from '../../services/products.service';
 import { Product } from '../../interfaces/product';
 import { Item } from '../../interfaces/item';
@@ -8,7 +8,8 @@ import { Item } from '../../interfaces/item';
   selector: 'app-observador',
   standalone: true,
   imports: [
-    CommonModule
+    CommonModule,
+    NgOptimizedImage,
   ],
   templateUrl: './observador.component.html',
   styleUrl: './observador.component.css'
